@@ -1,23 +1,22 @@
-﻿using System;
+﻿////CONFIRMED from <martingganev>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Problem3
+namespace MilesToKM
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var name = Console.ReadLine();
-            var volume = int.Parse(Console.ReadLine());
-            var energy = int.Parse(Console.ReadLine());
-            var sugarContent = int.Parse(Console.ReadLine());
-
-            var calories = (double)volume * energy / 100.0;
-            var sugar = volume * sugarContent / 100.0;
-
-
-            Console.WriteLine($"{volume}ml {name}:");
-            Console.WriteLine($"{calories}kcal, {sugar}g sugars");
-
+            //We receive in the Console the number of miles -> float number.
+            var miles = float.Parse(Console.ReadLine());
+            var km = miles * 1.60934;
+            //Calculate the number of kilometers.
+            Console.WriteLine("{0:F2}", km);
+            //Print on the Console the kilometers, rounded up to the second digit.
         }
     }
 }
